@@ -1,0 +1,286 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	border: none;
+}
+
+a {
+	color: #f48025;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+
+body {
+	background: url(../images/bkgd.jpg) 0 0 repeat-x #f7f5f5;
+	color: #2b3034;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+
+
+
+
+#popup {
+	background-color:#fff; 
+	color: #757b7f;
+	position:absolute;
+/*	left:50%;
+	margin:0 0 0 -364px;
+	top:50px;
+*/	width: 728px; 
+	z-index:9999;
+}
+
+
+#popup.ResourcePopup {
+	background-color:#fff; 
+	color: #2B3034;
+	position:absolute;
+	left: 50% !important;
+	margin:0 0 0 -435px !important;
+	top:100px !important;
+	width: 870px; 
+	z-index:9999;
+	}
+
+
+
+
+
+#popup h3{
+	background: url(../images/callout-header-bar-bkgd.jpg) 0 0 no-repeat #f58026;
+	color: #fff;
+	font-size: 14px;
+	margin-bottom: 8px;
+	padding: 4px 27px;
+}
+
+
+
+.popupBody {
+	padding: 6px 22px 20px 22px;
+}
+.resourcelibrary  {
+	padding-top: 35px;
+}
+
+
+.popupBody p {
+	margin-bottom: 10px;
+}
+
+.learnmoreform {
+	padding-top: 20px;
+}
+
+.video {
+	padding-top: 45px;
+}
+
+
+
+form input {
+	color: #757b7f;
+	border: 1px solid #f7a667;
+	height: 23px;
+	margin-bottom: 10px;
+	width: 324px;
+}
+
+fieldset {
+	color: #757b7f;
+	padding: 10px;
+}
+
+legend {
+	color: #757b7f;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+
+
+
+/*End Website styles*/
+
+/* Calculator Styles */
+.resourcelibrary {background-color: #fff;}
+#aircell-tools {
+	width: 550px;
+	color: #2B3034;
+}
+.calc {
+	border: 1px solid #2B3034;;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+fieldset {
+	border: none;
+	padding:0;
+}
+
+legend {
+	padding: 5px 0;
+	margin-bottom: 10px;
+	font-size: 15px;
+	width: 100%;
+	display: block;
+	border-bottom: 1px solid #757B7F;
+}
+
+label {
+	font-size: 12px;
+	font-weight:bold;
+	
+	padding-bottom: 5px;
+	display: block;
+}
+
+label.totals, #B6, #B15, #H15, #B30, #E30{
+	font-size: 13px;
+	color: #F58026;
+}
+
+
+
+#aircell-tools input{
+	width: 75px;
+	text-align:center;
+}
+
+td {
+	font-size: 11px;
+	padding: 0 5px;
+}
+
+.utiliRevenCalc td {
+	text-align: right;
+}
+
+#aircell-tools  .utiliRevenCalc input {
+	width: 52px;
+}
+
+.UtilReveCalcCallout {
+	border: 1px solid #757B7F;
+	/*background-color:#e0dfdf;
+	padding: 0 40px;*/
+}
+
+.UtilReveCalcCallout p{
+	text-align: center;
+	margin: 0 0 5px 0;
+}
+.UtilReveCalcCallout input { 
+	
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+.UtilReveCalcCELL3 {
+	/*width: 300px;*/
+}
+
+.UtilReveCalcCELL3 td {
+	text-align: left;
+	padding-bottom: 10px;
+}
+
+
+td.removepad {
+	padding-bottom: 0;
+}
+
+p.calcarrows {
+	margin: 3px 0;
+	text-align: center;
+}
+
+#aircell-tools ul{
+	list-style-position: outside;
+	list-style-type: none;
+	margin: 0 0 8px 6px;
+}
+
+#aircell-tools  li {
+	background: url(public/images/bullet.gif) 0 5px no-repeat;
+	margin-bottom: 9px;
+	padding: 0 0 0 10px;
+}
+
+#aircell-tools  .roi input {
+	width: 42px;
+}
+
+
+/*styles for the text: "If you fly an additional..."*/
+.text {
+	color: #2B3034;
+	font-size: 12px;
+	padding-top: 15px;
+}
+
+
+
+#aircell-tools input.calculateBTN {
+	background: url("../images/calculateBTN-bkgd.jpg") no-repeat scroll 0 0 transparent;
+	border: none;
+	color: #fff !important;
+	cursor: pointer;
+    font-weight: bold;
+    height: 31px;
+    width: 159px;
+}
+#aircell-tools input.resetBTN {
+	background: url("../images/calculateBTN2-bkgd.jpg") no-repeat scroll 0 0 transparent;
+	border: none;
+	color: #fff !important;
+	cursor: pointer;
+    font-weight: bold;
+    height: 31px;
+    width: 89px;
+}
+
+form input {
+    border: none;
+	color: #666;
+	font-size:11px;
+}
+
+.adjust {
+	margin-top: 2px;
+}
+
+/*-------------------> Clearfix Selectors, Please do not modify <--------------------*/
+/* Clearfix */
+.clearfix:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.clearfix {
+	display:inline-block;
+}
+/* Hide from IE Mac \*/
+.clearfix {
+	display:block;
+}
+/* End hide from IE Mac */
+.brclear {
+	clear:both;
+	height:0;
+	margin:0;
+	font-size: 1px;
+	line-height: 0;
+}

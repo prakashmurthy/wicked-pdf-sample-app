@@ -1,0 +1,260 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <title>Aircell Calculator</title>
+    <link href="calc-styles.css" media="print" rel="stylesheet" type="text/css" />
+    <link href="calc-styles.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script type="text/javascript" src="calc-tools.js"></script>
+    <script type="text/javascript" src="autoNumeric-1.7.4.js"></script>
+    <script type="text/javascript" src="regex.js"></script>
+ </head>
+  <body>
+    <%= wicked_pdf_image_tag 'PDF-calc-header-image.jpg' %>
+<div class="popupBody resourcelibrary clearfix">
+     
+
+<form id="aircell-tools">
+      <div class="calc">
+      <fieldset>
+        <legend>Investment Calculation</legend>
+
+        <table>
+          <tbody><tr>
+            <td><input name="B4" tabindex="1" type="text"></td>
+            <td>Cost of Gogo Biz Equipment + Installation Labor</td>
+          </tr>
+
+          <tr>
+            <td><input name="B5" tabindex="2" type="text" ></td>
+            <td>Estimated % to recover at resale</td>
+          </tr>
+
+          <tr>
+            <td><label class="totals"><span id="B6" data-default="_"></span></label></td>
+            <td>Realized Investment 
+      		</td>
+          </tr>
+        </tbody></table>
+      </fieldset>
+		</div>
+        
+        
+        
+        
+        
+    
+<div class="calc utiliRevenCalc">
+      <fieldset>
+        <legend>Utilization & Revenue Calculations</legend>
+
+        <table>
+          <tbody>
+          <tr>
+          	<td colspan="2" valign="top">
+            	<table cellpadding="0" cellspacing="0" width="183">
+                	<tr>
+                        <td height="10"></td>
+                    </tr>
+                	<tr>
+                        <td colspan="2" valign="top"><label>Today</label>
+                    </tr>
+                	<tr>
+                        <td>Current hours flown/month</td>
+                        <td><input name="B12" tabindex="3" type="text"></td>
+                    </tr>
+                    <tr>
+                         <td>Current hourly charter rate</td>
+                         <td><input name="B13" tabindex="4" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Aircraft operating cost</td>
+                        <td><input name="B14" tabindex="5" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Current total monthly income
+                        </td>
+                        <td><label class="totals"><span id="B15" data-default="_"></span></label></td>
+                    </tr>
+                 	<tr>
+                        <td height="10"></td>
+                    </tr>
+               </table>
+            
+            
+            </td>
+          	<td valign="top">
+            	<table  class="UtilReveCalcCallout" cellpadding="0" cellspacing="0" width="123">
+                	<tr>
+                        <td height="10"></td>
+                    </tr>
+                	<tr>
+                        <td colspan="2" ><p><label>Adjustment for Gogo Biz</label></p></td>
+                    </tr>
+                    <tr>
+                        <td><p><input name="E12" tabindex="6" type="text"><br/>Increased hours flown/month</p></td>
+                    </tr>
+                    <tr>
+                        <td><p><input name="E13" tabindex="7" type="text"><br/>Increase in hourly charter rate</p>
+                        <input name="E14" data-default="0" tabindex="8" type="hidden" value="0" >
+
+                        </td>
+                    </tr>
+                	<tr>
+                        <td height="10"></td>
+                    </tr>
+                </table>
+            </td>
+          	<td colspan="2" valign="top">
+            	<table cellpadding="0" cellspacing="0" class="UtilReveCalcCELL3" width="183">
+                	<tr>
+                        <td height="10" class="removepad"></td>
+                    </tr>
+                	<tr>
+                        <td colspan="2"  class="removepad">
+                        <label>With Gogo Biz</label></td>
+                    <tr>
+                    <tr>
+                        <td><span id="H12" data-default="_"></span></td>
+                        <td class="adjust">Adjusted hours flown/month</td>
+                    </tr>
+                    <tr>
+                       <td><span id="H13" data-default="_"></span></td>
+                       <td class="adjust">New hourly charter rate</td>
+                    </tr>
+                    <tr>
+                        <td class="special"><span id="H14" data-default="_"></span></td>
+                        <td class="adjust special">A/C operating cost</td>
+                    </tr>
+                    <tr>
+                        <td><label class="totals"><span id="H15" data-default="_"></span></label></td>
+                        <td class="adjust">Total monthly income w/Gogo Biz 
+        </td>
+                    </tr>
+                </table>
+            </td>
+          </tr>
+        </tbody></table>
+      
+      </fieldset>
+	</div>    
+    
+    
+      <div class="calc">
+      <fieldset>
+        <legend>The Gogo Biz Effect</legend>
+        <div class="text">
+          <p>If you fly an <strong>additional <span id="XX" data-default="_"></span>
+             hours/month</strong> and increase the charter rate by
+             <strong>$<span id="YY" data-default="_"></span>/hour</strong>, Gogo Biz enables:</p>
+
+          <ul>
+            <li>Estimated full system payback period of
+                <strong><span id="CC" data-default="_"></span> years</strong>
+       </li>
+
+            <li>Estimated <span id="ZZIL" data-default="income"></span>
+               of <strong>$<span id="ZZ" data-default="_"></span>/month</strong></li>
+
+            <li>Estimated <span id="AAIL" data-default="income"></span>
+                 of <strong>$<span id="AA" data-default="_"></span>
+                over 3 years</strong>
+        </li>
+
+            <li>Estimated <span id="BBIL" data-default="income"></span>
+                 of <strong>$<span id="BB" data-default="_"></span>
+                over 5 years</strong>
+             </li>
+          </ul>
+        </div>
+   </fieldset>
+   </div>   
+      
+      
+ <div class="calc roi">
+      <fieldset>
+        <legend>Additional ROI Calculations</legend>
+
+        <table>
+          <tbody><tr>
+            <td colspan="3">If I want my entire investment returned in <strong>X</strong> months, <strong>how many additional hours per month must I fly</strong>?
+                 <br/><br/>
+            </td>
+
+          </tr>
+          <tr>
+			<td width="100">&nbsp;</td>
+            <td><input name="B25" tabindex="9" type="text" ></td>
+            <td>Estimated months to desired payback</td>
+          </tr>
+          <tr>
+			<td width="100">&nbsp;</td>
+            <td><label class="totals"><span id="B30" data-default="_"></span></label></td>
+            <td>Estimated required increase in monthly flight hours</td>
+		</tr>
+          <tr>
+            <td colspan="3"><p>If I want my entire investment returned in <strong>X</strong> months, <strong>how much must I increase the hourly charter rate</strong>?</p></td>
+          </tr>
+          
+
+          <tr>
+			<td width="100">&nbsp;</td>
+            <td><input name="E25" tabindex="10" type="text" ></td>
+            <td>Estimated months to desired payback</td>
+          </tr>
+		<tr>
+			<td width="100">&nbsp;</td>
+            <td><label class="totals">$<span id="E30" data-default="_"></span></label></td>
+            <td>Estimated  required increase in hourly charter rate</td>
+          </tr>
+          <!-- These cells are hidden in the spreadsheet and there is
+          no logic in the JS file to calculate them.
+
+          <tr>
+            <td>$<span id="B26" data-default="_"></span></td>
+            <td>Installation Cost Less Resale Value</td>
+
+            <td>$<span id="E26" data-default="_"></span></td>
+            <td>Installation Cost Less Resale Value</td>
+          </tr>
+
+          <tr>
+            <td>$<span id="B27" data-default="_"></span></td>
+            <td>Service Income/(Expense) for payback period</td>
+
+            <td>$<span id="E27" data-default="_"></span></td>
+            <td>Service Income/(Expense) for payback period</td>
+          </tr>
+
+          <tr>
+            <td>$<span id="B28" data-default="_"></span></td>
+            <td>Total Cost</td>
+
+            <td>$<span id="E28" data-default="_"></span></td>
+            <td>Total Cost</td>
+          </tr>
+
+          <tr>
+            <td>$<span id="B29" data-default="_"></span></td>
+            <td>Current Income / Hour</td>
+
+            <td></td>
+            <td></td>
+          </tr>
+
+          ==End hidden section== -->
+
+        </tbody></table>
+      </fieldset>
+</div>      
+      
+
+      <!--<input name="submit" class="calculateBTN" value="" tabindex="100" type="submit">
+      <input name="reset" class="resetBTN" value="" tabindex="200" type="button">-->
+    </form>
+  
+    <% if request.format.html? %>
+      <%= link_to "Generate PDF", example_path( :format => :pdf ) %>
+    <% end %>
+</div>
+</body></html>
