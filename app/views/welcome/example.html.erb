@@ -12,7 +12,11 @@
   <body>
 <div class="popupBody resourcelibrary clearfix">
      
+<% if request.format.html? %>
+  <img src="images/PDF-calc-header-image.jpg" alt=""/>
+<% else %>
   <%= wicked_pdf_image_tag 'PDF-calc-header-image.jpg' %>
+<% end %>
 <form id="aircell-tools">
       <div class="calc">
       <fieldset>
@@ -151,7 +155,11 @@
             	<tr>
                 	<td valign="top" width="5">&nbsp;</td>
                   <td valign="top" width="5">
-                    <%= wicked_pdf_image_tag 'bullet.gif' %>
+                    <% if request.format.html? %>
+                      <img src="images/bullet.gif" alt=""/>
+                    <% else %>
+                      <%= wicked_pdf_image_tag 'bullet.gif' %>
+                    <% end %>
                   </td>
                 	<td valign="top" width="5">&nbsp;</td>
                     <td valign="top" width="494">Estimated full system payback period of
@@ -161,7 +169,11 @@
             	<tr>
                 	<td valign="top" width="5">&nbsp;</td>
                   <td valign="top" width="5">
-                    <%= wicked_pdf_image_tag 'bullet.gif' %>
+                    <% if request.format.html? %>
+                      <img src="images/bullet.gif" alt=""/>
+                    <% else %>
+                      <%= wicked_pdf_image_tag 'bullet.gif' %>
+                    <% end %>
                   </td>
                 	<td valign="top" width="5">&nbsp;</td>
                     <td valign="top" width="494">Estimated <span id="ZZIL" data-default="income"></span>
@@ -172,7 +184,11 @@
             	<tr>
                 	<td valign="top" width="5">&nbsp;</td>
                   <td valign="top" width="5">
-                    <%= wicked_pdf_image_tag 'bullet.gif' %>
+                    <% if request.format.html? %>
+                      <img src="images/bullet.gif" alt=""/>
+                    <% else %>
+                      <%= wicked_pdf_image_tag 'bullet.gif' %>
+                    <% end %>
                   </td>
                 	<td valign="top" width="5">&nbsp;</td>
                     <td valign="top" width="494">Estimated <span id="AAIL" data-default="income"></span>
@@ -184,7 +200,11 @@
             	<tr>
                 	<td valign="top" width="5">&nbsp;</td>
                   <td valign="top" width="5">
-                    <%= wicked_pdf_image_tag 'bullet.gif' %>
+                    <% if request.format.html? %>
+                      <img src="images/bullet.gif" alt=""/>
+                    <% else %>
+                      <%= wicked_pdf_image_tag 'bullet.gif' %>
+                    <% end %>
                   </td>
                 	<td valign="top" width="5">&nbsp;</td>
                     <td valign="top" width="494">Estimated <span id="BBIL" data-default="income"></span>
@@ -285,4 +305,7 @@
   
   <div id="footer"><p>&copy;2012 Aircell. All rights reserved. | Contact Aircell: 303.321.3271 or <a href="mailto: connect@aircell.com">connect@aircell.com</a></p></div>
 </div>
+    <% if request.format.html? %>
+      <%= link_to "Generate PDF", example_path( :format => :pdf ) %>
+    <% end %>
 </body></html>
