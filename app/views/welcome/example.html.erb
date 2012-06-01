@@ -10,10 +10,9 @@
     <script type="text/javascript" src="regex.js"></script>
  </head>
   <body>
-    <%= wicked_pdf_image_tag 'PDF-calc-header-image.jpg' %>
 <div class="popupBody resourcelibrary clearfix">
      
-
+<img src="images/PDF-calc-header-image.jpg" alt=""/>
 <form id="aircell-tools">
       <div class="calc">
       <fieldset>
@@ -148,24 +147,46 @@
              hours/month</strong> and increase the charter rate by
              <strong>$<span id="YY" data-default="_"></span>/hour</strong>, Gogo Biz enables:</p>
 
-          <ul>
-            <li>Estimated full system payback period of
-                <strong><span id="CC" data-default="_"></span> years</strong>
-       </li>
+			<table cellpadding="0" cellspacing="0" class="effectLIST">
+            	<tr>
+                	<td valign="top" width="5">&nbsp;</td>
+                	<td valign="top" width="5"><img src="images/bullet.gif" alt=""/></td>
+                	<td valign="top" width="5">&nbsp;</td>
+                    <td valign="top" width="494">Estimated full system payback period of
+                <strong><span id="CC" data-default="_"></span> years</strong><br/><br/></td>
+                </tr>
+ 
+            	<tr>
+                	<td valign="top" width="5">&nbsp;</td>
+                	<td valign="top" width="5"><img src="images/bullet.gif" alt=""/></td>
+                	<td valign="top" width="5">&nbsp;</td>
+                    <td valign="top" width="494">Estimated <span id="ZZIL" data-default="income"></span>
+               of <strong>$<span id="ZZ" data-default="_"></span>/month</strong><br/><br/></td>
+                </tr>
 
-            <li>Estimated <span id="ZZIL" data-default="income"></span>
-               of <strong>$<span id="ZZ" data-default="_"></span>/month</strong></li>
 
-            <li>Estimated <span id="AAIL" data-default="income"></span>
+            	<tr>
+                	<td valign="top" width="5">&nbsp;</td>
+                	<td valign="top" width="5"><img src="images/bullet.gif" alt=""/></td>
+                	<td valign="top" width="5">&nbsp;</td>
+                    <td valign="top" width="494">Estimated <span id="AAIL" data-default="income"></span>
                  of <strong>$<span id="AA" data-default="_"></span>
-                over 3 years</strong>
-        </li>
+                over 3 years</strong><br/><br/></td>
+                </tr>
 
-            <li>Estimated <span id="BBIL" data-default="income"></span>
+
+            	<tr>
+                	<td valign="top" width="5">&nbsp;</td>
+                	<td valign="top" width="5"><img src="images/bullet.gif" alt=""/></td>
+                	<td valign="top" width="5">&nbsp;</td>
+                    <td valign="top" width="494">Estimated <span id="BBIL" data-default="income"></span>
                  of <strong>$<span id="BB" data-default="_"></span>
-                over 5 years</strong>
-             </li>
-          </ul>
+                over 5 years</strong><br/><br/></td>
+                </tr>
+
+            </table>
+
+
         </div>
    </fieldset>
    </div>   
@@ -253,8 +274,7 @@
       <input name="reset" class="resetBTN" value="" tabindex="200" type="button">-->
     </form>
   
-    <% if request.format.html? %>
-      <%= link_to "Generate PDF", example_path( :format => :pdf ) %>
-    <% end %>
+  
+  <div id="footer"><p>&copy;2012 Aircell. All rights reserved. | Contact Aircell: 303.321.3271 or <a href="mailto: connect@aircell.com">connect@aircell.com</a></p></div>
 </div>
 </body></html>
