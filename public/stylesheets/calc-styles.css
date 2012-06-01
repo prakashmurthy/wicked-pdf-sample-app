@@ -212,9 +212,15 @@ p.calcarrows {
 }
 
 #aircell-tools  li {
-	background: url(public/images/bullet.gif) 0 5px no-repeat;
+	background: url(images/bullet.gif) 0 5px no-repeat;
 	margin-bottom: 9px;
 	padding: 0 0 0 10px;
+}
+
+
+.effectLIST td{
+	font-size: 12px;
+	padding: 0;
 }
 
 #aircell-tools  .roi input {
@@ -258,6 +264,11 @@ form input {
 
 .adjust {
 	margin-top: 2px;
+}
+
+#footer {
+	color: #5e6a72;
+	font-size: 10px;
 }
 
 /*-------------------> Clearfix Selectors, Please do not modify <--------------------*/
